@@ -1,0 +1,6 @@
+use_frameworks!
+target 'TextureSwiftHelpers_Tests' do
+  pod 'TextureSwiftHelpers', :path => '../'
+  
+  
+end
