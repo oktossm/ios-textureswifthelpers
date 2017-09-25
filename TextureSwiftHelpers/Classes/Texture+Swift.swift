@@ -20,12 +20,17 @@ extension ASLayoutElement {
         return ASInsetLayoutSpec(insets: insets, child: self)
     }
 
-    public func with(insets: CGFloat) -> ASLayoutSpec {
-        return ASInsetLayoutSpec(insets: UIEdgeInsetsMake(insets, insets, insets, insets), child: self)
+    public func with(insets: CGFloatConvertible) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: UIEdgeInsetsMake(insets.cgFloatValue(), insets.cgFloatValue(), insets.cgFloatValue(), insets.cgFloatValue()),
+                                 child: self)
     }
 
-    public func with(_ top: CGFloat, _ left: CGFloat, _ bottom: CGFloat, _ right: CGFloat) -> ASLayoutSpec {
-        return ASInsetLayoutSpec(insets: UIEdgeInsetsMake(top, left, bottom, right), child: self)
+    public func with(_ top: CGFloatConvertible,
+                     _ left: CGFloatConvertible,
+                     _ bottom: CGFloatConvertible,
+                     _ right: CGFloatConvertible) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: UIEdgeInsetsMake(top.cgFloatValue(), left.cgFloatValue(), bottom.cgFloatValue(), right.cgFloatValue()),
+                                 child: self)
     }
 
     public func with(overlay: ASLayoutElement) -> ASLayoutSpec {
@@ -58,8 +63,8 @@ extension ASLayoutElement {
                                     child: self)
     }
 
-    public func with(ratio: CGFloat) -> ASLayoutSpec {
-        return ASRatioLayoutSpec(ratio: ratio, child: self)
+    public func with(ratio: CGFloatConvertible) -> ASLayoutSpec {
+        return ASRatioLayoutSpec(ratio: ratio.cgFloatValue(), child: self)
     }
 }
 
@@ -74,8 +79,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func with(width: CGFloat) -> ASLayoutElement {
-        self.style.width = width.points
+    public func with(width: CGFloatConvertible) -> ASLayoutElement {
+        self.style.width = width.cgFloatValue().points
         return self
     }
 
@@ -84,8 +89,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func with(height: CGFloat) -> ASLayoutElement {
-        self.style.height = height.points
+    public func with(height: CGFloatConvertible) -> ASLayoutElement {
+        self.style.height = height.cgFloatValue().points
         return self
     }
 
@@ -94,8 +99,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func with(maxWidth: CGFloat) -> ASLayoutElement {
-        self.style.maxWidth = maxWidth.points
+    public func with(maxWidth: CGFloatConvertible) -> ASLayoutElement {
+        self.style.maxWidth = maxWidth.cgFloatValue().points
         return self
     }
 
@@ -104,8 +109,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func with(maxHeight: CGFloat) -> ASLayoutElement {
-        self.style.maxHeight = maxHeight.points
+    public func with(maxHeight: CGFloatConvertible) -> ASLayoutElement {
+        self.style.maxHeight = maxHeight.cgFloatValue().points
         return self
     }
 
@@ -114,8 +119,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func with(minWidth: CGFloat) -> ASLayoutElement {
-        self.style.minWidth = minWidth.points
+    public func with(minWidth: CGFloatConvertible) -> ASLayoutElement {
+        self.style.minWidth = minWidth.cgFloatValue().points
         return self
     }
 
@@ -124,8 +129,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func with(minHeight: CGFloat) -> ASLayoutElement {
-        self.style.minHeight = minHeight.points
+    public func with(minHeight: CGFloatConvertible) -> ASLayoutElement {
+        self.style.minHeight = minHeight.cgFloatValue().points
         return self
     }
 
@@ -134,8 +139,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func withSize(_ width: CGFloat, _ height: CGFloat) -> ASLayoutElement {
-        self.style.preferredSize = CGSize(width: width, height: height)
+    public func withSize(_ width: CGFloatConvertible, _ height: CGFloatConvertible) -> ASLayoutElement {
+        self.style.preferredSize = CGSize(width: width.cgFloatValue(), height: height.cgFloatValue())
         return self
     }
 
@@ -144,8 +149,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func withMinSize(_ width: CGFloat, _ height: CGFloat) -> ASLayoutElement {
-        self.style.minSize = CGSize(width: width, height: height)
+    public func withMinSize(_ width: CGFloatConvertible, _ height: CGFloatConvertible) -> ASLayoutElement {
+        self.style.minSize = CGSize(width: width.cgFloatValue(), height: height.cgFloatValue())
         return self
     }
 
@@ -154,8 +159,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func withMaxSize(_ width: CGFloat, _ height: CGFloat) -> ASLayoutElement {
-        self.style.maxSize = CGSize(width: width, height: height)
+    public func withMaxSize(_ width: CGFloatConvertible, _ height: CGFloatConvertible) -> ASLayoutElement {
+        self.style.maxSize = CGSize(width: width.cgFloatValue(), height: height.cgFloatValue())
         return self
     }
 
@@ -171,29 +176,29 @@ extension ASLayoutElement {
 
 extension ASLayoutElement {
 
-    public func withSpacing(before value: CGFloat) -> ASLayoutElement {
-        self.style.spacingBefore = value
+    public func withSpacing(before value: CGFloatConvertible) -> ASLayoutElement {
+        self.style.spacingBefore = value.cgFloatValue()
         return self
     }
 
-    public func withSpacing(after value: CGFloat) -> ASLayoutElement {
-        self.style.spacingAfter = value
+    public func withSpacing(after value: CGFloatConvertible) -> ASLayoutElement {
+        self.style.spacingAfter = value.cgFloatValue()
         return self
     }
 
-    public func withFlexGrow(_ value: CGFloat = 1.0) -> ASLayoutElement {
-        self.style.flexGrow = value
+    public func withFlexGrow(_ value: CGFloatConvertible = 1.0) -> ASLayoutElement {
+        self.style.flexGrow = value.cgFloatValue()
         return self
     }
 
-    public func withFlexShrink(_ value: CGFloat = 1.0) -> ASLayoutElement {
-        self.style.flexShrink = value
+    public func withFlexShrink(_ value: CGFloatConvertible = 1.0) -> ASLayoutElement {
+        self.style.flexShrink = value.cgFloatValue()
         return self
     }
 
     public var flexible: ASLayoutElement {
-        self.style.flexShrink = 1.0
-        self.style.flexGrow = 1.0
+        self.style.flexShrink = 1.0.cgFloatValue()
+        self.style.flexGrow = 1.0.cgFloatValue()
         return self
     }
 
@@ -207,13 +212,13 @@ extension ASLayoutElement {
         return self
     }
 
-    public func with(ascender value: CGFloat) -> ASLayoutElement {
-        self.style.ascender = value
+    public func with(ascender value: CGFloatConvertible) -> ASLayoutElement {
+        self.style.ascender = value.cgFloatValue()
         return self
     }
 
-    public func with(descender value: CGFloat) -> ASLayoutElement {
-        self.style.descender = value
+    public func with(descender value: CGFloatConvertible) -> ASLayoutElement {
+        self.style.descender = value.cgFloatValue()
         return self
     }
 }
@@ -229,8 +234,8 @@ extension ASLayoutElement {
         return self
     }
 
-    public func withPosition(_ x: CGFloat, _ y: CGFloat) -> ASLayoutElement {
-        self.style.layoutPosition = CGPoint(x: x, y: y)
+    public func withPosition(_ x: CGFloatConvertible, _ y: CGFloatConvertible) -> ASLayoutElement {
+        self.style.layoutPosition = CGPoint(x: x.cgFloatValue(), y: y.cgFloatValue())
         return self
     }
 
@@ -239,8 +244,8 @@ extension ASLayoutElement {
         return self.absolute()
     }
 
-    public func positioned(at x: CGFloat, _ y: CGFloat) -> ASLayoutElement {
-        self.style.layoutPosition = CGPoint(x: x, y: y)
+    public func positioned(at x: CGFloatConvertible, _ y: CGFloatConvertible) -> ASLayoutElement {
+        self.style.layoutPosition = CGPoint(x: x.cgFloatValue(), y: y.cgFloatValue())
         return self.absolute()
     }
 }
