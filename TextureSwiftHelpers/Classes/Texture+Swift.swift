@@ -267,7 +267,7 @@ extension Array where Element: ASLayoutElement {
                                  justifyContent: justify,
                                  alignItems: align,
                                  flexWrap: flexWrap,
-                                 alignContent: .start,
+                                 alignContent: alignContent,
                                  children: self)
     }
 
@@ -281,7 +281,7 @@ extension Array where Element: ASLayoutElement {
                                  justifyContent: justify,
                                  alignItems: align,
                                  flexWrap: flexWrap,
-                                 alignContent: .start,
+                                 alignContent: alignContent,
                                  children: self)
     }
 
@@ -295,7 +295,7 @@ extension Array where Element: ASLayoutElement {
                                  justifyContent: justify,
                                  alignItems: align,
                                  flexWrap: flexWrap,
-                                 alignContent: .start,
+                                 alignContent: alignContent,
                                  children: self)
     }
 
