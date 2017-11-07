@@ -266,8 +266,8 @@ extension Array where Element: ASLayoutElement {
                                  spacing: spacing,
                                  justifyContent: justify,
                                  alignItems: align,
-                                 flexWrap: .noWrap,
-                                 alignContent: .start,
+                                 flexWrap: flexWrap,
+                                 alignContent: alignContent,
                                  children: self)
     }
 
@@ -280,8 +280,8 @@ extension Array where Element: ASLayoutElement {
                                  spacing: spacing,
                                  justifyContent: justify,
                                  alignItems: align,
-                                 flexWrap: .noWrap,
-                                 alignContent: .start,
+                                 flexWrap: flexWrap,
+                                 alignContent: alignContent,
                                  children: self)
     }
 
@@ -294,8 +294,8 @@ extension Array where Element: ASLayoutElement {
                                  spacing: spacing,
                                  justifyContent: justify,
                                  alignItems: align,
-                                 flexWrap: .noWrap,
-                                 alignContent: .start,
+                                 flexWrap: flexWrap,
+                                 alignContent: alignContent,
                                  children: self)
     }
 
