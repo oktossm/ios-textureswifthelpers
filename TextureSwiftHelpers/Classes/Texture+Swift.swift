@@ -7,7 +7,7 @@ import UIKit
 import AsyncDisplayKit
 
 
-//MARK: - Specs
+// MARK: - Specs
 
 
 extension ASLayoutElement {
@@ -21,7 +21,21 @@ extension ASLayoutElement {
     }
 
     public func with(insets: CGFloatConvertible) -> ASLayoutSpec {
-        return ASInsetLayoutSpec(insets: UIEdgeInsetsMake(insets.cgFloatValue(), insets.cgFloatValue(), insets.cgFloatValue(), insets.cgFloatValue()),
+        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: insets.cgFloatValue(),
+                                                      left: insets.cgFloatValue(),
+                                                      bottom: insets.cgFloatValue(),
+                                                      right: insets.cgFloatValue()),
+                                 child: self)
+    }
+
+    public func with(top: CGFloatConvertible = 0,
+                     left: CGFloatConvertible = 0,
+                     bottom: CGFloatConvertible = 0,
+                     right: CGFloatConvertible = 0) -> ASLayoutSpec {
+        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: top.cgFloatValue(),
+                                                      left: left.cgFloatValue(),
+                                                      bottom: bottom.cgFloatValue(),
+                                                      right: right.cgFloatValue()),
                                  child: self)
     }
 
