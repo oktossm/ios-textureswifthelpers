@@ -12,15 +12,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05A5161B7AE412E1A6DC8F2C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		05A5161B7AE412E1A6DC8F2C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		24653606650488E546AB53AE /* Pods-TextureSwiftHelpers_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureSwiftHelpers_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureSwiftHelpers_Tests/Pods-TextureSwiftHelpers_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		428126D52DC30E3B306E0ED9 /* Pods-TextureSwiftHelpers_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureSwiftHelpers_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureSwiftHelpers_Tests/Pods-TextureSwiftHelpers_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		59E283625D3C633A37B30143 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		59E283625D3C633A37B30143 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* TextureSwiftHelpers_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureSwiftHelpers_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		77A6764E9206ABFC6957FF0B /* Pods_TextureSwiftHelpers_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureSwiftHelpers_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E77CA44E20CF07D6FF507E91 /* TextureSwiftHelpers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TextureSwiftHelpers.podspec; path = ../TextureSwiftHelpers.podspec; sourceTree = "<group>"; };
+		E77CA44E20CF07D6FF507E91 /* TextureSwiftHelpers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TextureSwiftHelpers.podspec; path = ../TextureSwiftHelpers.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,13 +131,9 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -333,7 +329,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -349,7 +346,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

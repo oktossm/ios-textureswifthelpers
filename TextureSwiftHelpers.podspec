@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TextureSwiftHelpers'
-  s.version          = '0.3.2'
+  s.version          = '0.4'
   s.summary          = 'Texture Swift helpers'
 
 # This description is used to generate tags and improve search results.
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
   s.dependency 'Texture', '~> 2.0'
   
 end

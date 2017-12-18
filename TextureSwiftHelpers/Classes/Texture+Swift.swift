@@ -367,9 +367,9 @@ extension CGFloat: CGFloatConvertible {
 }
 
 
-extension Integer {
+extension BinaryInteger {
     public func cgFloatValue() -> CGFloat {
-        return CGFloat(self.toIntMax())
+        return CGFloat(Int64(self))
     }
 }
 
