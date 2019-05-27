@@ -7,19 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		193B07291E1F693B45591827 /* Pods_TextureSwiftHelpers_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6764E9206ABFC6957FF0B /* Pods_TextureSwiftHelpers_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05A5161B7AE412E1A6DC8F2C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		24653606650488E546AB53AE /* Pods-TextureSwiftHelpers_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureSwiftHelpers_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextureSwiftHelpers_Tests/Pods-TextureSwiftHelpers_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		428126D52DC30E3B306E0ED9 /* Pods-TextureSwiftHelpers_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureSwiftHelpers_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextureSwiftHelpers_Tests/Pods-TextureSwiftHelpers_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		59E283625D3C633A37B30143 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* TextureSwiftHelpers_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureSwiftHelpers_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		77A6764E9206ABFC6957FF0B /* Pods_TextureSwiftHelpers_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureSwiftHelpers_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77CA44E20CF07D6FF507E91 /* TextureSwiftHelpers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TextureSwiftHelpers.podspec; path = ../TextureSwiftHelpers.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -28,29 +24,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193B07291E1F693B45591827 /* Pods_TextureSwiftHelpers_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		534A4EBECB6298D3A4BF68FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				77A6764E9206ABFC6957FF0B /* Pods_TextureSwiftHelpers_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				C6D6E842501265B1C573545B /* Pods */,
-				534A4EBECB6298D3A4BF68FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,15 +74,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		C6D6E842501265B1C573545B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				428126D52DC30E3B306E0ED9 /* Pods-TextureSwiftHelpers_Tests.debug.xcconfig */,
-				24653606650488E546AB53AE /* Pods-TextureSwiftHelpers_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,12 +81,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TextureSwiftHelpers_Tests" */;
 			buildPhases = (
-				A364AD0E401BA2ACC87069A4 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				D816062DB58E407D50A73B54 /* [CP] Embed Pods Frameworks */,
-				7C3D293743A8BCBC7A54EE70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,54 +138,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7C3D293743A8BCBC7A54EE70 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextureSwiftHelpers_Tests/Pods-TextureSwiftHelpers_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A364AD0E401BA2ACC87069A4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D816062DB58E407D50A73B54 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextureSwiftHelpers_Tests/Pods-TextureSwiftHelpers_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACE11AFB9204008FA782 /* Sources */ = {
@@ -315,7 +240,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 428126D52DC30E3B306E0ED9 /* Pods-TextureSwiftHelpers_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -336,7 +260,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24653606650488E546AB53AE /* Pods-TextureSwiftHelpers_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

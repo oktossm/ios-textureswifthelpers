@@ -43,7 +43,7 @@ extension ASLayoutElement {
                      _ left: CGFloatConvertible,
                      _ bottom: CGFloatConvertible,
                      _ right: CGFloatConvertible) -> ASLayoutSpec {
-        return ASInsetLayoutSpec(insets: UIEdgeInsetsMake(top.cgFloatValue(), left.cgFloatValue(), bottom.cgFloatValue(), right.cgFloatValue()),
+        return ASInsetLayoutSpec(insets: UIEdgeInsets(top: top.cgFloatValue(), left: left.cgFloatValue(), bottom: bottom.cgFloatValue(), right: right.cgFloatValue()),
                                  child: self)
     }
 
@@ -323,7 +323,7 @@ extension Array where Element: ASLayoutElement {
 
 
 public extension ASDimension {
-    public static var auto: ASDimension {
+    static var auto: ASDimension {
         return ASDimensionMake(.auto, 0)
     }
 }
@@ -336,11 +336,11 @@ public protocol CGFloatConvertible {
 
 public extension CGFloatConvertible {
 
-    public var points: ASDimension {
+    var points: ASDimension {
         return ASDimensionMake(self.cgFloatValue())
     }
 
-    public var fraction: ASDimension {
+    var fraction: ASDimension {
         return ASDimensionMakeWithFraction(self.cgFloatValue())
     }
 }
